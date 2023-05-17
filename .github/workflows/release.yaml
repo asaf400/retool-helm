@@ -25,8 +25,7 @@ jobs:
 
       - name: Helm Deps
         run: |
-          helm init --skip-refresh
-          helm repo rm stable
+          helm init --skip-refresh --stable-repo-url https://charts.helm.sh/stable
           helm repo add bitnami https://charts.bitnami.com/bitnami
           for dir in $(ls -d charts/*); do
             helm dep update $dir;
