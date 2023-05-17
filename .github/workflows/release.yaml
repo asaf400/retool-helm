@@ -28,6 +28,7 @@ jobs:
           helm init --skip-refresh
           helm repo add bitnami https://charts.bitnami.com/bitnami
           for dir in $(ls -d charts/*); do
+            helm dep update $dir;
             helm dep build $dir;
           done
 
