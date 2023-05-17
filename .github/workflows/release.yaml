@@ -23,14 +23,14 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v1
 
-      - name: Helm Deps
-        run: |
-          helm init --skip-refresh --stable-repo-url https://charts.helm.sh/stable
-          helm repo add bitnami https://charts.bitnami.com/bitnami
-          for dir in $(ls -d charts/*); do
-            helm dep update $dir;
-            helm dep build $dir;
-          done
+      # - name: Helm Deps
+      #   run: |
+      #     helm init --skip-refresh --stable-repo-url https://charts.helm.sh/stable
+      #     helm repo add bitnami https://charts.bitnami.com/bitnami
+      #     for dir in $(ls -d charts/*); do
+      #       helm dep update $dir;
+      #       helm dep build $dir;
+      #     done
 
 
       - name: Run chart-releaser
