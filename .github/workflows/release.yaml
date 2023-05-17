@@ -25,6 +25,7 @@ jobs:
 
       - name: Helm Deps
         run: |
+          helm init
           helm repo add bitnami https://charts.bitnami.com/bitnami
 
       - name: Run chart-releaser
