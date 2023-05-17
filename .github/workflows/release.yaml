@@ -25,9 +25,7 @@ jobs:
 
       - name: Helm Deps
         run: |
-          for dir in $(ls -d charts/*); do
-            helm dependency update $dir;
-          done
+          helm repo add bitnami https://charts.bitnami.com/bitnami
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
