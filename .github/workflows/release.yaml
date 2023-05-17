@@ -25,7 +25,7 @@ jobs:
 
       - name: Helm Deps
         run: |
-          helm init --client-only --skip-refresh
+          helm init --skip-refresh
           helm repo add bitnami https://charts.bitnami.com/bitnami
 
       - name: Run chart-releaser
