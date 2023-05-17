@@ -27,6 +27,11 @@ jobs:
         run: |
           helm init --skip-refresh
           helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm repo add https://charts.bitnami.com/bitnami https://charts.bitnami.com/bitnami
+          for dir in $(ls -d charts/*); do
+            helm dep build $dir;
+          done
+
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
