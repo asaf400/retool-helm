@@ -2,6 +2,23 @@ apiVersion: v1
 entries:
   retool:
   - apiVersion: v2
+    created: "2023-05-21T13:26:33.602756982Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.5
+    description: A Helm chart for Kubernetes
+    digest: fa18843c2c17e33f8156201867eef2d630e36aa0619bb84fc3fb3aecf4c4e86a
+    maintainers:
+    - email: engineering+helm@retool.com
+      name: Retool Engineering
+    name: retool
+    type: application
+    urls:
+    - https://github.com/asaf400/retool-helm/releases/download/retool-5.0.4/retool-5.0.4.tgz
+    version: 5.0.4
+  - apiVersion: v2
     created: "2023-05-17T15:42:15.201971352Z"
     dependencies:
     - condition: postgresql.enabled
@@ -18,4 +35,4 @@ entries:
     urls:
     - https://github.com/asaf400/retool-helm/releases/download/retool-5.0.3/retool-5.0.3.tgz
     version: 5.0.3
-generated: "2023-05-17T15:42:15.201983752Z"
+generated: "2023-05-21T13:26:33.602769182Z"
