@@ -35,4 +35,26 @@ entries:
     urls:
     - https://github.com/asaf400/retool-helm/releases/download/retool-5.0.3/retool-5.0.3.tgz
     version: 5.0.3
-generated: "2023-05-21T13:26:33.602769182Z"
+  retool-wf:
+  - apiVersion: v2
+    created: "2023-05-22T12:34:38.04419678Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.5
+    - condition: retool-temporal-services-helm.enabled,workflows.enabled
+      name: retool-temporal-services-helm
+      repository: ""
+      version: 1.1.0
+    description: A Helm chart for Kubernetes
+    digest: a18eea530659d14ea50dfbfbfc849a1699f3c9da6e3dcae7b981e2054389de22
+    maintainers:
+    - email: engineering+helm@retool.com
+      name: Retool Engineering
+    name: retool-wf
+    type: application
+    urls:
+    - https://github.com/asaf400/retool-helm/releases/download/retool-wf-4.11.12/retool-wf-4.11.12.tgz
+    version: 4.11.12
+generated: "2023-05-22T12:34:38.04421048Z"
